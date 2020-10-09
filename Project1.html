@@ -54,38 +54,46 @@
             </div>
             <div id="Questions">
             <h2>Questions</h2>
-                <ol>
-                    <li>What is the purpose of JavaScript?  Answer in general and also provide three 
-                        specific examples of how JavaScript is commonly used.</li>
-                    <li>Who invented JavaScript and when?</li>
-                    <li>What software program will you be using to write JavaScript?</li>
-                    <li>What software program will you be using to run JavaScript?</li>
-                    <li>Why are external scripts preferable to scripts added directly within an HTML file?</li>
-                </ol>
+                <dl>
+                    <dt>What is the purpose of JavaScript?  Answer in general and also provide three 
+                        specific examples of how JavaScript is commonly used.</dt>
+                    <dd>
+                        The purpose of JavaScript is to make a web page more interactive.  
+                        HTML gives the structure, CSS gives the style, and JavaScript gives the 
+                        page movement and life.  For example, Javascript can add new HTML to a page,
+                        it can provide reactions to use actions within the page, and it can get and 
+                        set cookies to provide a unique experience for the end user. 
+                    </dd>
+                    <dt>Who invented JavaScript and when?</dt>
+                    <dd>
+                        JavaScript was invented by Brendan Eich in 1995.
+                    </dd>
+                    <dt>What software program will you be using to write JavaScript?</dt>
+                    <dd>
+                        I will be using Visual Studio Code as the program to write JavaScript 
+                        for this course as I am somewhat familiar with the program and am comfortable
+                        with using the software.
+                    </dd>
+                    <dt>What software program will you be using to run JavaScript?</dt>
+                    <dd>
+                        I will be using the Google Chrome browser to run Javascript.  This web browser 
+                        uses the V8 Javascript engine to execute the language.
+                    </dd>
+                    <dt>Why are external scripts preferable to scripts added directly within an HTML file?</dt>
+                    <dd>
+                        External scripts are preferred when developing web pages as the script can be 
+                        reused on multiple pages and can be updated in one location instead of updating 
+                        the script on each individual HTML page.
+                    </dd>
+                </dl>
             </div>
             <div id="Exercises">
             <h2>Exercises</h2>
                 <ol>
                     <li>Add a script that alerts "Hi World!"</li>
-                    <button id="Exercise1" onclick="exercise1()">Click to fire alert</button>
-
-                    <script>
-                        "use strict"
-                        function exercise1() {
-                            alert('Hi World!');
-                        }
-                    </script>
                     <li>In the script created in step 1, add a statement to console.log("Hi Insert Your Name");</li>
-                    <button id="Exercise2" onclick="exercise2()">Click to fire alert</button>
-
-                    <script>
-                        "use strict"
-                        function exercise2() {
-                            alert('Hi World!');
-                            console.log('Hi James');
-                        }
-                    </script>
-                    <li>In the script created in step 1 and also step 4, include the "use strict": directive as the first line.</li>
+                    <li>In the script created in step 1 and also step 4, include the 
+                        "use strict": directive as the first line.</li>
                     <li>Add a second script that declares 2 variables:  a constant named myName assigned to your actual name 
                         as a string, and a variable named mySalary assigned to any number that you would like as a salary.  
                         Use console.log and the variable names to log out a phrase similar to the following:  My name is Lisa 
@@ -100,45 +108,143 @@
                     <li>In the script you created in step 4, console.log each of these expressions (they are found at the end of the Type 
                         Conversions lesson) Make sure you understand these!  The + operator is the tricky 
                         one given it will NOT convert a string.</li>
-                        <ul>
-                            <li>"" + 1 + 0</li>
-                            <li>"" - 1 + 0</li>
-                            <li>true + false</li>
-                            <li>6 / "3"</li>
-                            <li>"2" * "3"</li>
-                            <li>4 + 5 + "px"</li>
-                            <li>"$" + 4 + 5</li>
-                            <li>"4" - 2</li>
-                            <li>"4px" - 2</li>
-                            <li>7 / 0</li>
-                            <li>"  -9  " + 5</li> 
-                            <li>"  -9  " - 5</li>
-                            <li>null + 1</li>
-                            <li>undefined + 1</li>
-                        </ul>
                     <li>In the script you created in step 4, add the following statements.</li>
-                        <ul>
-                            <li>In two different statements after these variable declarations, console.log the value of c and d. </li>
-                            <li>Add a comment to explain the value of c.</li>
-                            <li>Add a comment to explain the value of d.</li>
-                            <li>
-                                let a = 5, b = 5; 
-                                let c = ++a;   
-                                let d = b++;
-                            </li>
-                        </ul>
                     <li>
                         In the script you created in step 4, add the following statements.  
                         In two different statements after these variable declarations, 
                         console.log the value of x and y.
                     </li>
-                        <ul>
-                            <li>Add a comment to explain how x was calculated.</li>
-                            <li>Add a comment to explain how y was calculated.</li>
-                            <li>let x = 5;</li>
-                            <li>let y = 1 + (x *= 2);</li>
-                        </ul>
                 </ol>
+                <h2>Exercise 1</h2>
+                <button id="Exercise1" onclick="exercise1()">Click to fire alert</button>
+
+                <script>
+                    "use strict"
+                    function exercise1() {
+                        alert('Hi World!');
+                    }
+                </script>
+                <h2>Exercise 2</h2>
+                <button id="Exercise2" onclick="exercise2()">Click to fire Exercise 2</button>
+
+                <script>
+                    function exercise2() {
+                        alert('Hi World!');
+                        console.log('Hi James');
+                    }
+                </script>
+                <h2>Exercise 3</h2>
+                <button id="Exercise3" onclick="exercise3()">Click to fire Exercise 3</button>
+
+                <script>
+                    "use strict"
+                    function exercise3() {
+                        alert('Hi World!');
+                        console.log('Hi James');
+                    }
+                </script>
+                <h2>Exercise 4</h2>
+                <button id="Exercise4" onclick="exercise4()">Click to fire Exercise 4</button>
+
+                <script>
+                    "use strict"
+                    function exercise4() {
+                        const myName = "James Atkisson";
+                        let mySalary = 100000;
+                        console.log("My name is " + myName + " and my salary is " + mySalary);
+                    }
+                </script>
+                <h2>Exercise 5</h2>
+                <button id="Exercise5" onclick="exercise5()">Click to fire Exercise 5</button>
+
+                <script>
+                    "use strict"
+                    function exercise5() {
+                        const myName = "James Atkisson";
+                        let mySalary = 100000;
+                        console.log("My name is " + myName + " and my salary is " + mySalary);
+                        mySalary = 150000;
+                        console.log("My name is " + myName + " and my new salary is " + mySalary);
+                    }
+                </script>
+                <h2>Exercise 6</h2>
+                <button id="Exercise6" onclick="exercise6()">Click to fire Exercise 6</button>
+
+                <script>
+                    "use strict"
+                    function exercise6() {
+                        const myName = "James Atkisson";
+                        let mySalary = 100000;
+                        let veteranStatus = false;
+                        console.log("My name is " + myName + " and my veteran status is " + veteranStatus);
+                    }
+                </script>
+                <h2>Exercise 7</h2>
+                <button id="Exercise7" onclick="exercise7()">Click to fire Exercise 7</button>
+
+                <script>
+                    "use strict"
+                    function exercise7() {
+                        const myName = "James Atkisson";
+                        let mySalary = 100000;
+                        let veteranStatus = false;
+                        console.log(typeof(myName));
+                        console.log(typeof(mySalary));
+                        console.log(typeof(veteranStatus));
+                    }
+                </script>
+                <h2>Exercise 8</h2>
+                <button id="Exercise8" onclick="exercise8()">Click to Console.Log</button>
+
+                <script>
+                    "use strict"
+                    function exercise8() {
+                        console.log("" + 1 + 0);
+                        console.log("" - 1 + 0);
+                        console.log(true + false);
+                        console.log(6 / "3");
+                        console.log("2" * "3");
+                        console.log(4 + 5 + "px");
+                        console.log("$" + 4 + 5);
+                        console.log("4" - 2);
+                        console.log("4px" - 2);
+                        console.log(7 / 0);
+                        console.log("  -9  " + 5);
+                        console.log("  -9  " - 5);
+                        console.log(null + 1);
+                        console.log(undefined + 1);
+                    }
+                </script>
+                <h2>Exercise 9</h2>
+                <button id="Exercise9" onclick="exercise9()">Click to fire Exercise 9</button>
+
+                <script>
+                    "use strict"
+                    function exercise9() {
+                        let a = 5, b = 5; 
+                        let c = ++a;   
+                        let d = b++;
+                        //c is the value of a incremented by 1 before being called
+                        console.log(c);
+                        //d is the value of b incremented by 1 after being called
+                        console.log(d);
+                    }
+                </script>
+                <h2>Exercise 10</h2>
+                <button id="Exercise10" onclick="exercise10()">Click to fire Exercise 10</button>
+
+                <script>
+                    "use strict"
+                    function exercise10() {
+                        let x = 5;
+                        let y = 1 + (x *= 2);
+                        //x is the value of 5
+                        console.log(x);
+                        //y is the value of x multiplied by x times 2
+                        //1 is added to that calculation after it is completed
+                        console.log(y);
+                    }
+                </script>
             </div>
         </main>
         <footer>
