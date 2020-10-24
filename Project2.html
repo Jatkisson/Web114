@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<!--James Atkisson 10/14/20 -->
+
+<html lang="en">
+    <head>
+        <title>James Atkisson</title>
+        <link rel="stylesheet" href="style/style.css">
+        <meta charset="utf-8">
+        <script src="script/script.js"></script> 
+    </head>
+    <body>
+        <header>
+            <h1>
+                Project 2: Connecting JavaScript to the content in a web page, using the DOM
+            </h1>
+        </header>
+        <nav>
+            
+        </nav>
+        <main>
+            <div id="Instructions">
+            <h2>Instructions:</h2>
+                <ol>
+                    <li>Create a semantically correct, validated, and spell checked HTML web page with the 
+                        following questions, answers, and exercises.</li>
+                    <li>Add a pleasing external style sheet. No, I'm not grading in your styles but 
+                        practicing CSS is important as we will use JavaScript to modify styles soon too!</li>
+                    <li>Add your name and the current date at the top of every file as a comment.</li>
+                    <li>Publish the completed web page to the student web server and post the URL to your web page here.</li>
+                </ol>
+            </div>
+            <div id="Questions">
+            <h2>Questions</h2>
+                <dl>
+                    <dt>1.) At the end of the Browser environment lesson, the author makes 
+                        this comment. "Now we’ll get down to learning DOM, because the 
+                        document plays the central role in the UI." <br> 
+                        Explain this sentence to a non-technical person.  What is the DOM? 
+                        What is the document? What is the UI?  
+                        How does this relate to JavaScript?
+                        </dt>
+                    <dd>
+                        The DOM is the document object model and this is crucial for several
+                        reasons. The biggest reason is because computers are not very smart. 
+                        JavaScript is used to make changes to the page and make things 
+                        interactive, but without defining what "things" really are, the 
+                        computer wouldn't be able to know.  The DOM is how we can define what 
+                        all of the different pieces are and provide clarification for the 
+                        computer.  For example, we can describe the section where instructions 
+                        go and we can describe the section where questions go on the web page. 
+                        These descriptions are stored in the DOM and allow the computer to know 
+                        what these sections are and be ready to make any changes to these sections 
+                        if person were to ask for the instructions or questions section to be changed.
+                    </dd>
+                    <dt>2.) What specification documents does the author recommend 
+                        (include the link and the description of the specification in your answer.)</dt>
+                    <dd>
+                        The author included several links for specifications in the "Browser 
+                        environment, specs" section and the links go to different sections of 
+                        w3.org and spec pages.  The links for these pages are below.<br>
+                        <ul>
+                            <li><a href="https://dom.spec.whatwg.org/">https://dom.spec.whatwg.org/</a></li>
+                            <li><a href="https://www.w3.org/TR/cssom-1/">https://www.w3.org/TR/cssom-1/</a></li>
+                            <li><a href="https://html.spec.whatwg.org/">https://html.spec.whatwg.org/</a></li>
+                            <li><a href="https://spec.whatwg.org/">https://spec.whatwg.org/</a></li>
+                            <li><a href="https://www.w3.org/TR/cssom-1/">https://www.w3.org/TR/cssom-1/</a></li>
+                        </ul>
+                    </dd>
+                    <dt>3.) Explain the relationship between an HTML element that you write in a 
+                        code editor, the DOM as it is presented by the browser, and a node in the DOM.</dt>
+                    <dd>
+                        An HTML element that is written in a code editor is part of what makes up 
+                        the DOM once it is loaded in the browser. The DOM is the object that is built 
+                        into the browser that organizes HTML elements and allows for the elements to 
+                        be rendered and also manipulated by JavaScript. The DOM contains each HTML 
+                        element and as more elements are added, then these create additional nodes 
+                        or child nodes in the object. Therefore, the elements, DOM, and nodes in the 
+                        DOM all work together to make up the document object once a web page is rendered 
+                        in a browswer.
+                    </dd>
+                </dl>
+            </div>
+            <div id="Exercises">
+            <h2>Exercises</h2>
+                <ol>
+                    <li>Copy and paste the following code from the "walking 
+                        the DOM" lesson just before &lt;/body&gt; on your web page.  
+                        We haven't covered all of the JavaScript yet, but you 
+                        should be able to conceptually understand what each 
+                        statement is doing based on the explanations.  Add 
+                        comments as shown below to explain what that statement 
+                        is doing.</li>
+                    <li>
+                        Use document.body as the starting point, then insert 12 console.log statements into 
+                        your script to demonstrate the navigation properties found in the Summary section of 
+                        the Walking the DOM lesson.
+                    </li>
+                </ol>
+                
+            </div>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2020 James Atkisson</p>
+            <p>E-mail me at <a href="mailto:atkisson.james@gmail.com">atkisson.james@gmail.com</a></p>
+        </footer>
+        <script>
+            for (let i = 0; i < document.body.childNodes.length; i++) { // add comment here
+                //loop through as many child nodes are found on the page and complete the loop
+                //once the function has iterated through all of the nodes.
+                  console.log( document.body.childNodes[i] ); // add comment here
+                //console.log this child node that is selected by the condition in the loop
+              }
+            for (let node of document.body.childNodes) { // add comment here
+                //for each child node found in the body of the document, execute the condition
+                  console.log(node); // add comment here
+                //console.log the node that is selected by the loop.  This is essentially doing
+                //the same thing as the previous for loop, but arguably in a more readable fashion.
+              }
+
+            console.log(document.body.parentNode);
+            console.log(document.body.childNodes);
+            console.log(document.body.firstChild);
+            console.log(document.body.lastChild);
+            console.log(document.body.previousSibling);
+            console.log(document.body.nextSibling);
+            console.log(document.body.parentElement);
+            console.log(document.body.children);
+            console.log(document.body.firstElementChild);
+            console.log(document.body.lastElementChild);
+            console.log(document.body.previousElementSibling);
+            console.log(document.body.nextElementSibling);
+        </script> 
+    </body>
+</html>

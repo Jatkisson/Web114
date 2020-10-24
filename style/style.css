@@ -1,0 +1,34 @@
+/* James Atkisson 10/14/20 */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0em;
+    padding: 0em;
+    border: 0em;
+    background-color: #FBFBFD;
+    color: #7c7c7c;
+    }
+
+header {padding: 3em;}
+
+div {padding: 2em 5em;}
+
+ol {padding:1em 5em;}
+
+ul {list-style-type: none;}
+
+button {margin: 10px;}
+
+header {
+    background-color: #7c7c7c;
+    color: #F5F5F7;
+}
+
+footer {
+    text-align: center;
+}
+
+#Questions {
+    background-color:  #7c7c7c;
+    color: #F5F5F7;
+}

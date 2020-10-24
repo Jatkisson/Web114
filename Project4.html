@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<!--James Atkisson 10/24/20 -->
+
+<html lang="en">
+    <head>
+        <title>James Atkisson</title>
+        <link rel="stylesheet" href="style/style.css">
+        <meta charset="utf-8">
+        <script src="script/script.js"></script> 
+    </head>
+    <body>
+        <header>
+            <h1>
+                Project 4: Creating variables and using alert(), confirm(), 
+                and prompt() to interact with the user, using if-then-else structures
+            </h1>
+        </header>
+        <nav>
+            
+        </nav>
+        <main>
+            <div id="Instructions">
+            <h2>Instructions:</h2>
+                <ol>
+                    <li>Create a semantically correct, validated, and spell checked HTML web page with the 
+                        following questions, answers, and exercises.</li>
+                    <li>Add a pleasing external style sheet. No, I'm not grading in your styles but 
+                        practicing CSS is important as we will use JavaScript to modify styles soon too!</li>
+                    <li>Add your name and the current date at the top of every file as a comment.</li>
+                    <li>Publish the completed web page to the student web server and post the URL to your web page here.</li>
+                </ol>
+            </div>
+            <div id="Questions">
+            <h2>Questions</h2>
+                <dl>
+                    <dt>1.  alert(), confirm(), and prompt() are methods of which object?</dt>
+                    <dd>
+                        alert(), confirm(), and prompt() are methods of the default object 
+                        / Window object that allows developers to interact with the user
+                    </dd>
+                    <dt>2.  Why can we use the alert(), confirm(), and prompt() 
+                        methods without preceding them with the object. (object dot) syntax??</dt>
+                    <dd>
+                        The alert(), confirm(), and prompt() are able to be used without 
+                        the preceding object dot notation because it is the default global 
+                        object does not require calling the object, but the alert(), 
+                        confirm(), and prompt() methods will still work the same if the 
+                        window object dot notation is used.
+                    </dd>
+                </dl>
+            </div>
+            <div id="Exercises">
+            <h2>Exercises</h2>
+                <ol>
+                    <li>Add a statement that declares a variable named user and assign the variable to the value of the answer given to a JavaScript prompt.  The prompt should ask the user for his or her name.</li>
+
+                    <li>Add a statement that declares a variable named proceed and assign the variable to the value of the answer given to a JavaScript confirm.  The text should ask the user permission to use his or her name on the web page.</li>
+
+                    <li>Write a traditional if - else statement that assigns the value in the user variable as the textContent property of an &lt;h1&gt; element  IF the value of the proceed variable is true.  If the proceed variable is false, the textContent property of the &lt;h1&gt; element should say "Privacy Please".</li>
+                        
+                    <li>Rewrite the if - else statement in #3 using the conditional ? operator.</li>
+                        
+                    <li>Prompt the user for his or her age, and store the result in a variable named age.</li>
+
+                    <li>Add a window.alert() statement that alerts out the person's name and age as a final statement in your JavaScript.</li>  
+                </ol> 
+                <h1 id="Exercise3">Exercise 3 H1</h1>
+                <h1 id="Exercise4">Exercise 4 H1</h1>
+            </div>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2020 James Atkisson</p>
+            <p>E-mail me at <a href="mailto:atkisson.james@gmail.com">atkisson.james@gmail.com</a></p>
+        </footer>
+        <script>
+            //1.   Add a statement that declares a variable named user and assign 
+            //the variable to the value of the answer given to a JavaScript prompt.  
+            //The prompt should ask the user for his or her name.
+
+            let user = prompt("Please enter your name", "Your name here");
+
+            //2.  Add a statement that declares a variable named proceed and assign 
+            //the variable to the value of the answer given to a JavaScript confirm.  
+            //The text should ask the user permission to use his or her name on the web page.
+
+            let proceed = confirm("Do you grant permission to use the entered name?");
+            
+            //3.  Write a traditional if - else statement that assigns the value 
+            //in the user variable as the textContent property of an <h1> element  
+            //IF the value of the proceed variable is true.  If the proceed variable is 
+            //false, the textContent property of the <h1> element should say "Privacy Please".
+            
+                if (proceed == true) {
+                    Exercise3.textContent = user;
+                } else {
+                    Exercise3.textContent = "Privacy Please";
+                }
+
+            //4.  Rewrite the if - else statement in #3 using the conditional ? operator.
+
+                proceed == true ? Exercise4.textContent = user : Exercise4.textContent = "Privacy Please";
+            
+            //5. Prompt the user for his or her age, and store the result in a variable named age.
+            
+                let age = prompt("Please enter your age", "Your age here"); 
+
+            //6. Add a window.alert() statement that alerts out the person's name 
+            //and age as a final statement in your JavaScript.
+                
+                alert("Your name is " + user + " and your age is " + age);
+
+        </script> 
+    </body>
+</html>
