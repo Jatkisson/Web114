@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<!--James Atkisson 10/24/20 -->
+
+<html lang="en">
+    <head>
+        <title>James Atkisson</title>
+        <link rel="stylesheet" href="style/style.css">
+        <meta charset="utf-8">
+        <script src="script/script.js"></script> 
+    </head>
+    <body>
+        <header>
+            <h1>
+                Project 5: functions!! using both function 
+                declaration and function expression syntax
+            </h1>
+        </header>
+        <nav>
+        </nav>
+        <main>
+            <div id="Instructions">
+            <h2>Instructions:</h2>
+                <ol>
+                    <li>Create a semantically correct, validated, and spell checked HTML web page with the 
+                        following questions, answers, and exercises.</li>
+                    <li>Add a pleasing external style sheet. No, I'm not grading in your styles but 
+                        practicing CSS is important as we will use JavaScript to modify styles soon too!</li>
+                    <li>Add your name and the current date at the top of every file as a comment.</li>
+                    <li>Publish the completed web page to the student web server and post the URL to your web page here.</li>
+                </ol>
+            </div>
+            <div id="Questions">
+            <h2>Questions</h2>
+                <dl>
+                    <dt>
+                        1.  What is the difference between a function 
+                        declaration and a function expression?</dt>
+                    <dd>
+                        A function declaration is when a function is declared 
+                        in a more familiar way to most other programming language, 
+                        but a function expression is when a function can be 
+                        declared like it is a variable.  When it is declared 
+                        like a variable, then it can be used in the same way as 
+                        a variable is declared or it can be declared as if it is 
+                        a part of an object.  Function declarations are also 
+                        different because they are available to be used whenever 
+                        they are needed in a script, but function expressions 
+                        must have the function already expressed or else it 
+                        will not be able to be called in the script.
+                    </dd>
+                    <dt>2.  Why do we create functions in the first place?  
+                        There are two big reasons.  One has to do with WHEN the 
+                        statements in a function run.  The other has to do with how 
+                        often the statements in a function are run.
+                    </dt>
+                    <dd>
+                        Functions are needed because tasks can be needed at 
+                        different times within a website.  If a function is used, 
+                        then it can execute the task when the page is loaded 
+                        or it can be used to respond to an action on the page.  
+                        When a function is used, then tasks can be triggered 
+                        at times beyond when the page is loaded.  The other 
+                        benefit is that we can reuse the code in the function 
+                        if it is written in a function and not listed on its 
+                        own in the script tags.  When functions are written, then 
+                        they can be reused to simplify the code as well as 
+                        improving the maintenance of the code. When task are 
+                        written within functions, then you only need to modify 
+                        the function once and the calls to the function will 
+                        all be updated right away.
+                    </dd>
+                </dl>
+            </div>
+            <div id="Exercises">
+            <h2>Exercises</h2>
+                <ol>
+                    <li>
+                        Use window methods to gather two pieces of information from a user, 
+                        their age and also whether they want to proceed (true or false).  
+                        Then, write a traditional if statement that checks whether the age 
+                        value is greater than or equal to 18 as well as the proceed 
+                        variable is TRUE.  If both conditions are true, change the 
+                        textContent property of a &lt;p&gt; that is already in the HTML to 
+                        their name plus the text " is legal" such as:  Lisa is legal.<br>
+                    </li>
+                    <li>
+                        Copy the "Check the login" code from the Logical Operators 
+                        exercise, but change the words/case to create a two-step 
+                        test to identify your favorite sport and team (for example, 
+                        if baseball, then Royals)...use whatever sport and team you like. 
+                        <br><br>Add console.log statements that sensibly respond to all 5 
+                        possible outcomes based on user interaction.
+                    </li>
+                    <li>
+                        Create a variable named secret assigned to a number between 1 
+                        and 10.  Write a while loop that keeps prompting a user to enter 
+                        a number between 1 and 10.  Stop prompting the user once the 
+                        secret number is guessed.
+                    </li>
+                    <li>Write #3 again, but this time, use a do while loop.</li>
+                    <li>
+                        Write a for loop to console.log numbers between 1 
+                        and 31 that are evenly divided by 3.
+                    </li>
+                    <li>
+                        Create a variable named house that is assigned to 
+                        the value of a prompts for the user's Hogwart's House 
+                        (Gryffindor, Slytherin, Ravenclaw, Hufflepuff).  
+                        Create a switch statement to console.log out an appropriate 
+                        message based on the user's input.
+                    </li>
+                    <li>
+                        Write #6 again, using if statements and different 
+                        console.log messages.  Use house2 as the variable name.
+                    </li>
+                    <li>
+                        Wrap #6 in  a function named sortingHat() 
+                        using a function declaration.
+                    </li>
+                    <li>
+                        Create a variable named sortingHat2 and assign 
+                        it to a function expression that wraps the code in #7.
+                    </li>
+                    <li>
+                        Execute both the sortingHat and sortingHat2
+                         functions as the last two statements in the script.
+                    </li>
+                </ol> 
+            </div>
+            <p id="Exercise1" style="text-align: center;">Exercise 1 text</p>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2020 James Atkisson</p>
+            <p>E-mail me at <a href="mailto:atkisson.james@gmail.com">atkisson.james@gmail.com</a></p>
+        </footer>
+
+        <script>
+            //Exercise 1
+            let name = prompt("Please enter your name", "Your name here");
+            let age = prompt("Please enter your age", "Your age here");
+            let proceed = confirm("Would you like to continue?");
+
+            if (age >= 18 && proceed == true) {
+                let answer = name + " is legal.";
+                Exercise1.textContent = answer;  
+            }
+
+            //Exercise 2
+            let favSport = prompt("What is your favorite sport?", '');
+
+            if (favSport.toUpperCase() === 'BASEBALL') {
+
+            let favTeam = prompt('What is your favorite team?', '');
+
+            favTeam = favTeam.toUpperCase();
+
+            if (favTeam.includes('ROYAL') == true) {
+                console.log( 'Good Answer! Go Royals!' );
+            } else if (favTeam.includes('ROYAL') == false) {
+                console.log('That is a pretty good team');
+            } else {
+                console.log('I\'m not familiar with that team');
+            }
+
+            } else if (favSport === '' || favSport === null) {
+                console.log( 'Canceled' );
+            } else {
+                console.log( "I don't understand" );
+            }
+
+            //Exercise 3
+            let secretNum = Math.floor((Math.random() * 10) + 1);
+
+            let userGuess = prompt('Guess the secret number between 1 & 10', '');
+
+            while (userGuess != secretNum) {
+                userGuess = prompt('That is not the correct number.  Try again', '');
+            }
+            console.log("Correct answer for Exercise 3!");
+            
+            //Exercise 4
+            secretNum = Math.floor((Math.random() * 10) + 1);
+
+            do {
+            userGuess = prompt('Try to guess the secret number', '');
+            } while (userGuess != secretNum) 
+
+            console.log("Correct answer for Exercise 4!");
+
+            //Exercise 5
+            for(i = 0; i < 31; i++) {
+                if (i % 3 == 0)
+                console.log(i + " is divisible by 3");
+            }
+
+            //Exercise 6
+            let house = prompt("Please enter your house name.", "Gryffindor, Slytherin, Ravenclaw, or Hufflepuff")
+            switch(house.toUpperCase()) {
+                case 'GRYFFINDOR':
+                    console.log(house + " is a great house to be a part of!");
+                    break;
+                case 'SLYTHERIN':
+                    console.log(house + " is a great house to be a part of!");
+                    break;
+                case 'RAVENCLAW':
+                    console.log(house + " is a great house to be a part of!");
+                    break;
+                case 'HUFFLEPUFF':
+                    console.log(house + " is a great house to be a part of!");
+                    break;
+                default:
+                    console.log("Hmmmm...I don't think that is a Hogwarts house.");
+                    break;
+            }
+
+            //Exercise 7
+            house = prompt("Please enter your house name.", "Gryffindor, Slytherin, Ravenclaw, or Hufflepuff")
+
+            if (house.toUpperCase() == 'GRYFFINDOR') {
+                console.log(house + " is a great house to be a part of!");
+            } else if (house.toUpperCase() == 'SLYTHERIN') {
+                console.log(house + " is a great house to be a part of!");
+            } else if (house.toUpperCase() == 'RAVENCLAW') {
+                console.log(house + " is a great house to be a part of!");
+            } else if (house.toUpperCase() == 'HUFFLEPUFF') {
+                console.log(house + " is a great house to be a part of!");
+            } else {
+                console.log("Hmmmm...I don't think that is a Hogwarts house.");
+            }
+
+            //Exercise 8
+            function sortingHat() {
+                house = prompt("Please enter your house name.", "Gryffindor, Slytherin, Ravenclaw, or Hufflepuff")
+                switch(house.toUpperCase()) {
+                    case 'GRYFFINDOR':
+                        console.log(house + " is a great house to be a part of!");
+                        break;
+                    case 'SLYTHERIN':
+                        console.log(house + " is a great house to be a part of!");
+                        break;
+                    case 'RAVENCLAW':
+                        console.log(house + " is a great house to be a part of!");
+                        break;
+                    case 'HUFFLEPUFF':
+                        console.log(house + " is a great house to be a part of!");
+                        break;
+                    default:
+                        console.log("Hmmmm...I don't think that is a Hogwarts house.");
+                        break;
+                }
+            }
+
+            //Exercise 9
+            let sortingHat2 = function() {
+                house = prompt("Please enter your house name.", "Gryffindor, Slytherin, Ravenclaw, or Hufflepuff")
+                if (house.toUpperCase() == 'GRYFFINDOR') {
+                        console.log(house + " is a great house to be a part of!");
+                    } else if (house.toUpperCase() == 'SLYTHERIN') {
+                        console.log(house + " is a great house to be a part of!");
+                    } else if (house.toUpperCase() == 'RAVENCLAW') {
+                        console.log(house + " is a great house to be a part of!");
+                    } else if (house.toUpperCase() == 'HUFFLEPUFF') {
+                        console.log(house + " is a great house to be a part of!");
+                    } else {
+                        console.log("Hmmmm...I don't think that is a Hogwarts house.");
+                    }
+            }
+
+            //Exercise 10
+            sortingHat();
+            sortingHat2();
+
+        </script> 
+    </body>
+</html>
